@@ -1172,7 +1172,8 @@ if __name__ == "__main__":
     app = QApplication([])
 
     # Load the stylesheet from the CSS file
-    css_file_path = 'style.css'
+    src_dir = os.path.dirname(os.path.abspath(__file__))
+    css_file_path = os.path.join(src_dir, "style.css")
     stylesheet = load_stylesheet(css_file_path)
 
     # Apply the loaded stylesheet to the application
