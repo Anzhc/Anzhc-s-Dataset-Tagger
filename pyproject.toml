@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "anzhc-s-dataset-tagger"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "AGPL 3"
+readme = "README.md"
+packages = [{include = "anzhc_s_dataset_tagger"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyqt5 = "^5.15.9"
+sortedcontainers = "^2.4.0"
+nuitka = "^1.7.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

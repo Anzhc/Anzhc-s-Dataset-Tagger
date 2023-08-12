@@ -1,0 +1,30 @@
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+
+# PyQt5-specific
+*.pyqt5
+*.ui
+*.qrc
+
+venv/
+*.build/
+*.dist/
+*.onefile-build/
+*.bin
+*.exe
