@@ -11,7 +11,13 @@ packages = [{include = "anzhc_s_dataset_tagger"}]
 python = "^3.10"
 pyqt5 = "^5.15.9"
 sortedcontainers = "^2.4.0"
+nuitka = "^1.8.4"
 
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.40.2"
+
+[tool.yapf]
+based_on_style = "pep8"
 
 [build-system]
 requires = ["poetry-core"]
