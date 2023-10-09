@@ -1,4 +1,9 @@
-PyQt5==5.15.9
-PyQt5-Qt5==5.15.2
-PyQt5-sip==12.12.2
-sortedcontainers==2.4.0
+cffi==1.16.0 ; python_version >= "3.10" and python_version < "4.0" and platform_python_implementation == "PyPy"
+nuitka==1.8.4 ; python_version >= "3.10" and python_version < "4.0"
+ordered-set==4.1.0 ; python_version >= "3.10" and python_version < "4.0"
+pycparser==2.21 ; python_version >= "3.10" and python_version < "4.0" and platform_python_implementation == "PyPy"
+pyqt5-qt5==5.15.2 ; python_version >= "3.10" and python_version < "4.0"
+pyqt5-sip==12.12.2 ; python_version >= "3.10" and python_version < "4.0"
+pyqt5==5.15.9 ; python_version >= "3.10" and python_version < "4.0"
+sortedcontainers==2.4.0 ; python_version >= "3.10" and python_version < "4.0"
+zstandard==0.21.0 ; python_version >= "3.10" and python_version < "4.0"
