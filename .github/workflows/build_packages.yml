@@ -38,7 +38,7 @@ jobs:
         uses: Nuitka/Nuitka-Action@v0.6
         with:
           nuitka-version: main
-          script-name: main.py
+          script-name: src/main.py
           onefile: true
           standalone: true
           enable-plugins: pyqt5
