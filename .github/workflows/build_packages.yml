@@ -50,11 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }} Build
-          path: |
-            # if filename Anzhc-s-Dataset-Tagger.exe exist for windows in build folder
-            ${{ runner.os == 'Windows-latest' && 'build/Anzhc-s-Dataset-Tagger.exe' || '' }}
-            # if filename Anzhc-s-Dataset-Tagger exist for linux in build folder
-            ${{ runner.os == 'ubuntu-latest' && 'build/Anzhc-s-Dataset-Tagger' || '' }}
+          path: ${{ runner.os == 'windows-latest' && 'build/Anzhc-s-Dataset-Tagger.exe' || runner.os == 'ubuntu-latest' && 'build/Anzhc-s-Dataset-Tagger' || '' }}
 
   release:
     needs: build
