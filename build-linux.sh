@@ -9,7 +9,7 @@ fi
 # Activate the virtual environment
 source venv/bin/activate
 
-nuitka --standalone --onefile --enable-plugin=pyqt5 --follow-imports --output-filename=Anzhc-s-Dataset-Tagger --disable-console ./src/main.py
+python -m nuitka --standalone --onefile --enable-plugin=pyqt5 --follow-imports --output-filename=Anzhc-s-Dataset-Tagger --disable-console ./src/main.py
 
 # Deactivate the virtual environment
 deactivate
