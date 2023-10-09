@@ -52,6 +52,19 @@ jobs:
           name: ${{ runner.os }} Build
           path: |
             # if filename Anzhc-s-Dataset-Tagger.exe exist for windows in build folder
-            ${{ runner.os == 'Windows-latest' && 'build/Anzhc-s-Dataset-Tagger.exe' }}
+            ${{ runner.os == 'Windows-latest' && 'build/Anzhc-s-Dataset-Tagger.exe' || '' }}
             # if filename Anzhc-s-Dataset-Tagger exist for linux in build folder
-            ${{ runner.os == 'ubuntu-latest' && 'build/Anzhc-s-Dataset-Tagger' }}
+            ${{ runner.os == 'ubuntu-latest' && 'build/Anzhc-s-Dataset-Tagger' || '' }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Create release"
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ${{ needs.build.outputs.artifacts }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
